@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Villa Nilly — Restaurants et bars, Saint-Martin / Sint Maarten</title>
+<meta name="description" content="Nos adresses à nous pour manger et boire un verre à Saint-Martin / Sint Maarten, depuis la Villa Nilly.">
+<meta name="theme-color" content="#39616E">
+<link rel="canonical" href="https://villanilly.github.io/villa-nilly-guide/fr/dining.html">
+<link rel="alternate" hreflang="en" href="https://villanilly.github.io/villa-nilly-guide/dining.html">
+<link rel="alternate" hreflang="fr" href="https://villanilly.github.io/villa-nilly-guide/fr/dining.html">
+<link rel="alternate" hreflang="x-default" href="https://villanilly.github.io/villa-nilly-guide/dining.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Villa Nilly">
+<meta property="og:title" content="Villa Nilly — Restaurants et bars, Saint-Martin / Sint Maarten">
+<meta property="og:description" content="Nos adresses à nous pour manger et boire un verre à Saint-Martin / Sint Maarten, depuis la Villa Nilly.">
+<meta property="og:url" content="https://villanilly.github.io/villa-nilly-guide/fr/dining.html">
+<meta property="og:image" content="https://villanilly.github.io/villa-nilly-guide/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The pool and gallery at Villa Nilly, Orient Bay, St. Martin">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Villa Nilly — Restaurants et bars, Saint-Martin / Sint Maarten">
+<meta name="twitter:description" content="Nos adresses à nous pour manger et boire un verre à Saint-Martin / Sint Maarten, depuis la Villa Nilly.">
+<meta name="twitter:image" content="https://villanilly.github.io/villa-nilly-guide/og.jpg">
+<link rel="icon" href="../mark.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="Villa Nilly">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#39616E;--ink:#22343B;--muted:#4F6670;--meta:#6A7B82;--card:#FFFFFF;--sand:#D2BBAB;--bg:#F4F1EC;--line:rgba(57,97,110,.15);--inset:rgba(57,97,110,.08);--shadow:0 4px 18px rgba(20,40,50,.12);--fs-display:44px;--fs-reading:40px;--fs-title:26px;--fs-lede:21px;--fs-emphasis:19px;--fs-body:17px;--fs-label:15px;--fs-meta:14px;--lh-flush:1.0;--lh-tight:1.25;--lh-snug:1.4;--lh-open:1.5;--s-tight:4px;--s-snug:8px;--s-base:12px;--s-comfortable:16px;--s-section:20px;--r-pill:26px;--r-card:18px;--r-tile:14px;--tap:44px}
+*{box-sizing:border-box}
+/* A class that sets `display` beats the UA's `[hidden]{display:none}`, which is
+   how the nudge's iOS hint rendered next to the Android button on an Android
+   phone: `.nudge .ios{display:flex}` won on specificity and the attribute did
+   nothing. One line, before any component can hit it again. */
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font:400 var(--fs-body)/var(--lh-open) Roboto,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+
+/* §7.5.6b: the three states the site had NONE of. Declared once on a shared
+   selector list rather than per component - the panel puts the pressed state in
+   the theme for exactly this reason (§7.5.6), and a site with one `:active` rule
+   in it cannot drift into having four. */
+a,button,.more{-webkit-tap-highlight-color:transparent}
+a:active,button:active,.more:active{transform:scale(.98);filter:brightness(.96)}
+a:focus-visible,button:focus-visible,.more:focus-visible{
+ outline:2px solid var(--teal);outline-offset:2px;border-radius:var(--r-tile)}
+@media(hover:hover){
+ a:hover,button:hover,.more:hover{filter:brightness(.97)}
+}
+/* A tap target is 44px at every width (§7.5.6b). Applied to the things that
+   were 30-39px, not to prose links inside a paragraph, which have no box. */
+.tap{display:inline-flex;align-items:center;justify-content:center;
+ min-height:var(--tap)}
+
+.nudge{position:fixed;left:var(--s-base);right:var(--s-base);bottom:var(--s-base);z-index:60;
+ max-width:520px;margin:0 auto;background:var(--card);border-radius:var(--r-card);
+ box-shadow:var(--shadow);padding:var(--s-comfortable);
+ display:flex;align-items:flex-start;gap:var(--s-base);
+ transform:translateY(calc(100% + var(--s-section)));transition:transform .32s ease-out}
+.nudge.up{transform:translateY(0)}
+.nudge img{width:44px;height:44px;border-radius:var(--r-tile);flex:none}
+.nudge .t{flex:1;min-width:0}
+.nudge b{display:block;font-size:var(--fs-body);font-weight:600;color:var(--teal)}
+.nudge p{margin:var(--s-tight) 0 0;font-size:var(--fs-meta);color:var(--muted);
+ line-height:var(--lh-snug)}
+.nudge .row{display:flex;align-items:center;gap:var(--s-snug);margin-top:var(--s-base)}
+.nudge .add{display:inline-flex;align-items:center;justify-content:center;min-height:var(--tap);
+ padding:var(--s-base) var(--s-comfortable);border:0;border-radius:var(--r-pill);
+ background:var(--teal);color:var(--card);font:inherit;font-size:var(--fs-meta);
+ font-weight:600;cursor:pointer}
+.nudge .no{display:inline-flex;align-items:center;justify-content:center;min-height:var(--tap);
+ padding:var(--s-base) var(--s-comfortable);border:0;border-radius:var(--r-pill);
+ background:transparent;color:var(--muted);font:inherit;font-size:var(--fs-meta);
+ font-weight:600;cursor:pointer}
+/* iOS only: the arrow that points at the share button, which is bottom centre
+   on an iPhone. It is part of the card rather than a floating marker, because a
+   floating marker over Safari's own chrome is what a scam looks like. */
+.nudge .ios{display:flex;align-items:center;gap:var(--s-snug);margin-top:var(--s-base);
+ font-size:var(--fs-meta);color:var(--muted);font-weight:600}
+.nudge .ios .arrow{color:var(--teal);font-size:var(--fs-lede);line-height:var(--lh-flush)}
+/* With no filled button beside it, the dismiss button's own left padding reads
+   as a stray indent rather than as part of a control. */
+.nudge.ios-mode .no{padding-left:0}
+
+/* A header band, not a cover. These pages stopped being covers the moment the
+   landing page existed; a 250px photo hero on top of three rows of controls put
+   the first entry 61% down an iPhone. This is the same photo and the same
+   gradient, so the set still reads as one family - it just does not pretend to
+   be the front of it. The page's own name is the selector underneath. */
+.hero{position:relative;display:flex;flex-direction:column;align-items:center;
+ justify-content:center;text-align:center;padding:var(--s-comfortable);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:url(../hero.jpg) center 46%/cover;transform:scale(1.02)}
+.hero::after{content:"";position:absolute;inset:0;
+ background:linear-gradient(180deg,rgba(34,52,59,.62) 0%,rgba(57,97,110,.66) 55%,rgba(57,97,110,.82) 100%)}
+.hero>*{position:relative;z-index:1}
+/* W8: without `color:inherit` this computes rgb(0,0,238) - the browser default -
+   and is invisible only because its two children set white themselves. */
+.hero .mark{display:flex;align-items:center;justify-content:center;gap:var(--s-snug);
+ text-decoration:none;color:inherit;min-height:var(--tap);padding:0 var(--s-snug)}
+.hero .mark img{width:32px;height:auto;opacity:.96}
+.hero .chev{color:rgba(255,255,255,.8);font-size:var(--fs-title);line-height:var(--lh-flush)}
+.hero .wm{color:var(--card);font-size:var(--fs-emphasis);font-weight:600;letter-spacing:-.2px}
+.hero p{margin:var(--s-tight) 0 0;color:rgba(255,255,255,.86);font-size:var(--fs-meta);letter-spacing:.3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.tools{position:sticky;top:0;z-index:20;background:rgba(244,241,236,.94);
+ backdrop-filter:saturate(1.6) blur(10px);border-bottom:1px solid var(--line)}
+/* §7.5.6 Selector row. Both selectors on this page take Body 17 rather than the
+   panel's Emphasis 19 - §7.5.6b says why: the panel is read from a metre and
+   this is read at arm's length, and the three-cell control below has to hold
+   "Restaurants" at 375. One size for both selectors on the page. */
+.tabs{display:flex;gap:var(--s-snug);padding:var(--s-base) var(--s-comfortable) 0;max-width:760px;margin:0 auto}
+.tabs button{flex:1 1 0;min-width:0;border:1px solid var(--line);background:var(--card);color:var(--ink);
+ font:inherit;font-size:var(--fs-body);font-weight:600;padding:var(--s-base) var(--s-tight);
+ min-height:var(--tap);border-radius:var(--r-tile);cursor:pointer;
+ transition:background .15s,color .15s,border-color .15s}
+/* D1. The rule keys off a CLASS as well as the attribute, because the attribute
+   alone did not re-style in the renderer the audit ran in: `aria-pressed`
+   flipped, the list reordered, and the computed background did not move. A
+   class change invalidates style where an attribute change did not. Both are
+   set, so assistive tech keeps the attribute and the eye gets the fill. */
+.tabs button[aria-pressed=true],.tabs button.on{
+ background:var(--teal);border-color:var(--teal);color:var(--card)}
+.chips{display:flex;gap:var(--s-snug);overflow-x:auto;padding:var(--s-base) var(--s-comfortable);
+ max-width:760px;margin:0 auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.chips::-webkit-scrollbar{display:none}
+.chips button{white-space:nowrap;border:1px solid var(--line);background:var(--card);color:var(--muted);
+ font:inherit;font-size:var(--fs-meta);font-weight:600;padding:var(--s-base) var(--s-comfortable);
+ min-height:var(--tap);border-radius:var(--r-pill);cursor:pointer}
+/* D2: one selected colour on the page. The chips were ink and the tabs teal,
+   twelve pixels apart. §7.5.6's Selector row is teal with white content, once. */
+.chips button[aria-pressed=true]{background:var(--teal);border-color:var(--teal);color:var(--card)}
+/* D8/D10. The chip row is 1,155px of content in a 375px window with no
+   scrollbar, no fade and no partial chip: the seventh was sliced at the viewport
+   edge and nothing said there were more. It IS the page's group index - tapping
+   one collapses 29 entries to a group - so making it look scrollable is also
+   D10's answer, and a better one than adding a fourth row of navigation to a
+   page that already has three. The fade is a sibling rather than a
+   pseudo-element on the scroller, because a pseudo-element inside an
+   overflow:auto box scrolls away with the content. */
+.chipwrap{position:relative}
+.chipwrap::after{content:"";position:absolute;top:0;right:0;bottom:0;width:36px;
+ pointer-events:none;background:linear-gradient(90deg,rgba(244,241,236,0),rgba(244,241,236,.94))}
+.chipwrap.end::after{opacity:0;transition:opacity .2s}
+main{max-width:760px;margin:0 auto;padding:var(--s-snug) var(--s-comfortable) 44px}
+/* D3: 12.5px/600 against §7.5.6's Group heading, which is the Label step at 700.
+   D4: it was inset 2px from the cards it labels, which is the "nearly lines up"
+   case. */
+h2{display:flex;align-items:center;gap:var(--s-base);font-size:var(--fs-label);text-transform:uppercase;
+ letter-spacing:1.4px;color:var(--teal);font-weight:700;margin:var(--s-section) 0 var(--s-base)}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+article{background:var(--card);border-radius:var(--r-card);
+ padding:var(--s-comfortable);margin:0 0 var(--s-base);box-shadow:var(--shadow)}
+article h3{margin:0 0 var(--s-tight);font-size:var(--fs-emphasis);font-weight:600;letter-spacing:-.2px}
+/* D5: the line that tells you what the place IS was the smallest type on the
+   site at 11.5px. Meta step, and the group heading's own tracking. */
+.pill{display:block;color:var(--teal);font-size:var(--fs-meta);font-weight:600;letter-spacing:1.4px;
+ text-transform:uppercase;margin:0 0 var(--s-snug)}
+.hook{margin:0;font-size:var(--fs-body)}
+.desc{margin:var(--s-snug) 0 0;font-size:var(--fs-body);color:var(--muted);display:none}
+article.open .desc{display:block}
+.meta{margin:var(--s-base) 0 0;font-size:var(--fs-meta);color:var(--muted)}
+.actions{display:flex;flex-wrap:wrap;gap:var(--s-snug);margin-top:var(--s-comfortable)}
+/* W7: these were 38px tall on a phone site read one-handed. */
+.actions a,.more{display:inline-flex;align-items:center;justify-content:center;
+ min-height:var(--tap);font-size:var(--fs-meta);font-weight:600;text-decoration:none;
+ padding:var(--s-base) var(--s-comfortable);border-radius:var(--r-tile);
+ border:1px solid var(--line);color:var(--teal);background:var(--bg);cursor:pointer;user-select:none}
+.actions a.go{background:var(--teal);color:var(--card);border-color:var(--teal)}
+.pages{max-width:760px;margin:0 auto;padding:var(--s-base) var(--s-comfortable) 0;
+ display:flex;align-items:center;gap:var(--s-base)}
+.pages .seg{display:flex;gap:var(--s-tight);background:var(--inset);border-radius:var(--r-tile);
+ padding:var(--s-tight);flex:1;min-width:0}
+/* The language switch is a LEAVE, not a filter, so it sits outside the
+   segmented control with a rule between them and is set in the other
+   language's own word. Never a flag: a flag is a country. */
+.pages .lang{flex:none;display:inline-flex;align-items:center;min-height:var(--tap);
+ padding:0 var(--s-tight) 0 var(--s-base);border-left:1px solid var(--line);
+ font-size:var(--fs-meta);font-weight:600;color:var(--teal);text-decoration:none;white-space:nowrap}
+/* D9: `flex:1` does not equalise when the content's minimum width wins, which is
+   why French rendered 98/78/78 where English rendered 82/82/82. */
+.pages .seg a{flex:1 1 0;min-width:0;text-align:center;text-decoration:none;font:inherit;
+ font-size:var(--fs-body);font-weight:600;padding:var(--s-base) var(--s-tight);
+ min-height:var(--tap);display:inline-flex;align-items:center;justify-content:center;
+ border-radius:var(--r-tile);color:var(--muted);transition:background .15s,color .15s}
+.pages .seg a[aria-current=page]{background:var(--card);color:var(--teal);box-shadow:var(--shadow)}
+.home{max-width:760px;margin:var(--s-snug) auto 0;padding:0 var(--s-comfortable)}
+.home a{display:flex;align-items:center;gap:var(--s-base);text-decoration:none;color:var(--ink);
+ background:var(--card);border:1px solid var(--line);border-radius:var(--r-card);
+ padding:var(--s-comfortable);box-shadow:var(--shadow)}
+.home .arr{color:var(--sand);font-size:var(--fs-lede);line-height:var(--lh-flush)}
+.home b{display:block;font-size:var(--fs-body);font-weight:600;color:var(--teal)}
+.home small{display:block;font-size:var(--fs-meta);color:var(--muted);margin-top:var(--s-tight)}
+footer{text-align:center;padding:var(--s-section) var(--s-comfortable) 44px;color:var(--muted);
+ font-size:var(--fs-meta);border-top:1px solid var(--line);background:var(--card)}
+footer img{width:36px;opacity:.75;display:block;margin:0 auto var(--s-base)}
+.empty{text-align:center;color:var(--muted);padding:44px var(--s-base)}
+@media(min-width:620px){.hero{padding:var(--s-section) var(--s-comfortable)}
+ .hero .wm{font-size:var(--fs-lede)}.hero .mark img{width:36px}}
+
+</style>
+</head>
+<body>
+<header class="hero">
+  <a class="mark" href="./"><span class="chev">&lsaquo;</span><img src="../mark-white.png" alt=""><span class="wm">Villa Nilly</span></a>
+  <p>37 adresses où nous allons vraiment</p>
+</header>
+<h1 class="sr">Restaurants et bars &mdash; St. Martin / Sint Maarten</h1>
+<nav class="pages"><div class="seg"><a href="dining.html" aria-current="page">Restaurants</a><a href="beaches.html">Plages</a><a href="activities.html">Activités</a></div><a class="lang" href="../dining.html" hreflang="en" lang="en" rel="alternate">English</a></nav>
+<div class="tools">
+  <div class="tabs">
+    <button id="tab-occ" aria-pressed="true">Par envie</button>
+    <button id="tab-area" aria-pressed="false">Par secteur</button>
+  </div>
+  <div class="chipwrap" id="chipwrap"><div class="chips" id="chips"></div></div>
+</div>
+<main id="list"></main>
+<div class="home"><a href="./"><span class="arr">&larr;</span><span class="t"><b>Villa Nilly</b><small>Restaurants, plages, activités et la villa</small></span></a></div>
+<footer><img src="../mark.png" alt="">Our own picks, kept up to date.<br>Villa Nilly &middot; Baie Orientale</footer>
+<script>
+const DATA=[{"n": "Coco Beach", "a": "Baie Orientale", "r": "French", "t": "Beach club", "h": "Beach club à quelques minutes — transats et longs déjeuners.", "d": "Largement considéré comme le joyau de la Baie Orientale, Coco Beach est un restaurant et beach club chic dirigé par le chef doublement étoilé Laurent Saudeau. L'espace, fraîchement rénové, marie un décor élégant de bois et de blanc à une large vue sur la mer des Caraïbes, pour une cuisine française raffinée aux accents méditerranéens et caribéens. Lauréat du prix « Beach Star » du Festival culinaire 2023, c'est l'adresse d'une journée entière : le café du matin, un déjeuner gastronomique depuis un carbet, un transat ou la salle, puis des cocktails au coucher du soleil.", "ad": "Parc de la Baie Orientale, Orient Bay Beach, 97150 Saint-Martin", "p": "+590 690 64 14 94", "w": "cocobeach.restaurant", "m": "https://maps.google.com/?q=Coco+Beach+Orient+Bay+St+Martin", "o": ["walk", "beach"], "res": "OpenTable"}, {"n": "Kontiki Beach Restaurant", "a": "Baie Orientale", "r": "French", "t": "Restaurant de plage", "h": "Cuisine franco-asiatique, les pieds dans le sable.", "d": "Tout premier restaurant construit sur la plage d'Orient en 1989, le Kontiki reste l'une des adresses les plus emblématiques du sable. Tenu par Pierrot et le groupe Luftman, cette institution chic sert une cuisine française mâtinée de spécialités asiatiques — thon rouge croustillant, makis, poulet fermier rôti découpé devant vous, foie gras de canard. Le week-end, l'ambiance vire à la fête, DJ à l'appui, jusqu'au coucher du soleil sous les célèbres parasols rouges.", "ad": "Baie Orientale, Orient Bay Beach, 97150 Saint-Martin", "p": "+590 690 66 24 25", "w": "kontiki.restaurant", "m": "https://maps.google.com/?q=Kontiki+Beach+Restaurant+Orient+Bay+St+Martin", "o": ["walk", "beach"], "res": ""}, {"n": "Le P’tit Bistro", "a": "Baie Orientale", "r": "French", "t": "Bistrot français", "h": "Le bistrot français du quartier, comme il faut.", "d": "Une institution de Saint-Martin depuis plus de quinze ans : Le P'tit Bistro est le bistrot français, chaleureux et authentique, des Caraïbes. Tenu en famille par Jérôme et Manot, il sert une cuisine française traditionnelle généreuse et savoureuse, avec des suggestions exotiques chaque semaine. Les plateaux de fruits de mer arrivent frais toutes les semaines.", "ad": "Village Place, Orient Bay", "p": "+590 690 22 00 88", "w": "leptitbistro.restaurant", "m": "https://maps.google.com/?q=Le+P%E2%80%99tit+Bistro+Orient+Bay+St+Martin", "o": ["walk", "casual"], "res": ""}, {"n": "Les Galets", "a": "Baie Orientale", "r": "French", "t": "Table d’hôtes", "h": "Table d'hôtes gastronomique, à quelques pas.", "d": "Une table d'hôtes intime, nichée dans le jardin luxuriant d'un hôtel de charme près de la Baie Orientale. Aleksandra et Sébastien — le chef Barrière est passé par Paul Bocuse, Gordon Ramsay et Gérard Bertrand — composent chaque semaine un menu unique en cinq services, inspiré des produits de saison et des fondamentaux de la cuisine française. Le cadre au bord de la piscine, bercé par les rainettes, fait une soirée qu'on n'oublie pas. Du jeudi au samedi ; réservation indispensable par WhatsApp.", "ad": "Lot 45, Les Jardins d’Orient Bay, 97150 St. Martin", "p": "+590 690 56 58 01", "w": "lesgaletsxm.com", "m": "https://maps.google.com/?q=Les+Galets+Orient+Bay+St+Martin", "o": ["walk", "special"], "res": ""}, {"n": "L’Atelier", "a": "Baie Orientale", "r": "French", "t": "Grillades et fruits de mer", "h": "Viandes et poissons sur la baie, reconnu Gault Millau.", "d": "L'Atelier est LA table à viande de Saint-Martin — « le sommet du steakhouse », comme on dit ici. Alexandre, le propriétaire, vous présente lui-même l'ardoise, qui change chaque soir. Les viandes sont de premier ordre : wagyu japonais (Kobe et Kagoshima), black angus USDA Prime, minhota gallega du Portugal, porc noir ibérique, et d'autres encore.", "ad": "Place du Village, Baie Orientale, 97150 Saint-Martin", "p": "+590 690 22 10 22", "w": "latelier-sxm.com", "m": "https://maps.google.com/?q=L%E2%80%99Atelier+Orient+Bay+St+Martin", "o": ["walk", "special"], "res": ""}, {"n": "Maison Mère", "a": "Baie Orientale", "r": "French", "t": "Franco-créole", "h": "Cuisine française à l'accent créole, tout près.", "d": "Le nom dit tout, et Maison Mère tient sa promesse : une cuisine française de maison, raffinée, réchauffée par les Caraïbes. De l'entrée au dessert, tout est fait sur place avec de beaux produits, et les assiettes sont aussi jolies que bonnes. Le cadre intime au village de la Baie Orientale, une belle carte de cocktails et un service attentionné font de chaque dîner une occasion.", "ad": "Place de la Baie Orientale, Orient Bay, 97150 Saint-Martin", "p": "+590 690 38 11 39", "w": "maisonmere.restaurant", "m": "https://maps.google.com/?q=Maison+M%C3%A8re+Orient+Bay+St+Martin", "o": ["walk", "casual"], "res": "OpenTable"}, {"n": "Orange Fever", "a": "Baie Orientale", "r": "French", "t": "Bar de plage", "h": "Bar de plage à la Baie Orientale — transats et rhum.", "d": "Orange Fever, c'est la journée de plage à la Baie Orientale par excellence. Décontractée et joyeuse, l'adresse mêle plats français et caribéens, cocktails redoutables et ces fameuses pizzas artisanales dont tout le monde parle. Prenez un transat et un parasol (environ 8 $, boisson comprise) et faites-vous livrer le déjeuner sur le sable.", "ad": "Rue de la Baie Orientale, Orient Bay Beach, 97150 Saint-Martin", "p": "+590 690 75 52 11", "w": "orangefeversxm.com", "m": "https://maps.google.com/?q=Orange+Fever+Orient+Bay+St+Martin", "o": ["walk", "beach"], "res": ""}, {"n": "Roasty’s", "a": "Baie Orientale", "r": "French", "t": "Café et rôtisserie", "h": "Café et rôtisserie — le café le matin, le poulet le soir.", "d": "Une jolie nouveauté près du village de la Baie Orientale, Roasty's a très vite conquis les habitants et les visiteurs avec son poulet rôti — peau parfaitement croustillante, chair tendre et juteuse, et un jus qui fait tout. La carte va plus loin : beaux lobster rolls, pizzas sur focaccia, paninis, et ce que les habitués tiennent pour le meilleur tiramisu de l'île. Une adresse accueillante pour un déjeuner ou un dîner sans façons, côté français.", "ad": "261 Avenue Des Plages, Orient Bay, 97150 Saint-Martin", "p": "+590 690 38 66 70", "w": "", "m": "https://maps.google.com/?q=Roasty%E2%80%99s+Orient+Bay+St+Martin", "o": ["walk", "breakfast"], "res": ""}, {"n": "SAO Asian Factory", "a": "Baie Orientale", "r": "French", "t": "Asiatique", "h": "Cuisine panasiatique, à quelques minutes de la villa.", "d": "SAO offre une échappée asiatique soignée au cœur du village de la Baie Orientale. Sous la conduite d'Élodie, la maison marie des saveurs venues de toute l'Asie à un charme caribéen. Ne manquez pas les spécialités maison : tartare de mahi-mahi à l'asiatique, saumon au wakamé. Tio, au bar, passe pour l'un des meilleurs mixologues de l'île.", "ad": "Place du Village, Baie Orientale, 97150 Saint-Martin", "p": "+590 690 73 64 36", "w": "saosxm.com", "m": "https://maps.google.com/?q=SAO+Asian+Factory+Orient+Bay+St+Martin", "o": ["walk", "casual"], "res": ""}, {"n": "The Perch Bar & Grill", "a": "Baie Orientale", "r": "French", "t": "Bar de plage et grillades", "h": "Grillades et cocktails à l'extrémité naturiste de la Baie Orientale.", "d": "Le seul bar de plage de l'extrémité sud naturiste de la plage d'Orient, sur le site de l'ancien Club Orient détruit par l'ouragan Irma. Reconstruit par Randy, Shania, Cedrick et leur équipe, le Perch grille à la commande travers de porc, mahi frais, crevettes à l'ail, cheeseburgers, et sert des cocktails frappés à des prix très en dessous des beach clubs du nord. Espèces uniquement (dollars et euros acceptés à parité).", "ad": "Club Orient, Orient Beach, 97150 St. Martin", "p": "", "w": "", "m": "https://maps.google.com/?q=The+Perch+Bar+%26+Grill+Orient+Bay+St+Martin", "o": ["walk", "beach", "drinks"], "res": ""}, {"n": "Anse Marcel Beach", "a": "Anse Marcel", "r": "French", "t": "Restaurant et club de plage", "h": "Club de plage au bout tranquille de l'île, à Anse Marcel.", "d": "Le restaurant de plage du Domaine Anse Marcel, cuisine française et caribéenne, service petit-déjeuner et déjeuner face à la baie. Il fait partie d'un ensemble plus vaste qui gère aussi le plus formel Le Gourmet en soirée (fermé en basse saison, réouverture en novembre). Les avis sont partagés sur le service et les prix, mieux vaut y aller avec les bonnes attentes. Bon choix pour un déjeuner dépaysant, côté français, plus tranquille.", "ad": "26 Rue de Lonvilliers, Anse Marcel, 97150 Saint-Martin", "p": "+590 690 26 38 50", "w": "ledomaineansemarcelbeach.com", "m": "https://maps.google.com/?q=Anse+Marcel+Beach+Restaurant+St+Martin", "o": ["beach", "casual"], "res": ""}, {"n": "Be Kool", "a": "Marigot", "r": "French", "t": "Bistrot français", "h": "Bistrot familial français, sur la colline au-dessus de la marina de Marigot.", "d": "Une affaire de famille — le père, ancien du Tropicana, épaulé par deux de ses fils en cuisine — pour une cuisine française assurée sur la colline dominant Marina Port la Royale. Au menu : foie gras, canard, agneau, escargots, et une carte des vins prise au sérieux. Le restaurant occupe l'ancien emplacement du Chanteclair et garde une clientèle fidèle pour un vrai dîner assis. Les avis sont contrastés, mieux vaut réserver et viser un bon soir.", "ad": "Marina Port la Royale, 97150 Marigot, Saint-Martin", "p": "+590 590 29 15 15", "w": "", "m": "https://maps.google.com/?q=Be+Kool+Marina+Port+la+Royale+Marigot+St+Martin", "o": ["casual", "special"], "res": ""}, {"n": "Bistrot Caraïbes", "a": "Grand-Case", "r": "French", "t": "Gastronomie française", "h": "Gastronomie française sur la rue des restaurants de Grand Case.", "d": "Une valeur sûre de Grand Case, sur le boulevard des restaurants, pour une cuisine française classique et sans fioritures — foie gras, homard thermidor, magret de canard, un vrai plateau de fromages. La salle, climatisée, est un bon choix les soirs trop chauds pour une terrasse ouverte. Les habitués reviennent, et les avis récents en font toujours un des favoris de l'île. Réservation conseillée.", "ad": "81 Boulevard de Grand Case, 97150 Saint-Martin", "p": "+590 690 53 61 44", "w": "bistrot-caraibes.com", "m": "https://maps.google.com/?q=Bistrot+Caraibes+Grand+Case+St+Martin", "o": ["special"], "res": ""}, {"n": "BZH", "a": "Oyster Pond", "r": "French", "t": "Crêperie et bistrot", "h": "Crêperie bretonne et bistrot, du côté d'Oyster Pond.", "d": "Un morceau de Bretagne aux Caraïbes. Laetitia et le chef Aurélien ont créé un refuge gourmand et chaleureux où les galettes de sarrasin et les crêpes sucrées côtoient une carte de classiques français qui change tous les quinze jours. Tout est fait maison, avec soin, à partir de produits frais. La carte des vins, très française, fait aussi une place aux cidres bretons. Plusieurs terrasses ombragées de palmiers accueillent 80 couverts pour des dîners tranquilles sous les étoiles, parfois en musique. Ouvert du lundi au samedi, le soir.", "ad": "72 Rue de Coralita, Oyster Pond, 97150 St. Martin", "p": "+590 690 10 16 01", "w": "bzh-oysterpond.com", "m": "https://maps.google.com/?q=BZH+Oyster+Pond+St+Martin", "o": ["casual"], "res": ""}, {"n": "Calmos Café", "a": "Grand-Case", "r": "French", "t": "Franco-caribéen", "h": "De retour sur la plage, six ans après Irma.", "d": "Rouvert en 2023 après six années de fermeture imposées par l'ouragan Irma, cet établissement en front de mer est de retour sur la plage de Grand-Case. La carte mêle technique française et âme caribéenne — confit de canard, ravioles de crevettes et de Saint-Jacques, ravioles de homard, et un tartare de mahi dont on ne se lasse pas. Cocktails créatifs et ambiance décontractée en continu, de 10 h à 1 h.", "ad": "40 Boulevard de Grand Case", "p": "+590 690 84 99 90", "w": "calmoscafesxm.com", "m": "https://maps.google.com/?q=Calmo%E2%80%99s+Cafe+Grand+Case+St+Martin", "o": ["beach", "casual"], "res": ""}, {"n": "Captain Frenchy’s", "a": "Grand-Case", "r": "French", "t": "Bar de plage et restaurant", "h": "Bar de plage bien français, les pieds dans le sable.", "d": "Un vétéran du front de mer de Grand-Case, franchement français de ton, où Fred et François mêlent charme caribéen et allure européenne. En journée, un transat, un service à la table et des tapas, des burgers ou une salade niçoise les pieds dans le sable. Le soir, la cuisine monte d'un cran avec un vrai service français — Saint-Jacques au beurre blanc, cuisses de grenouille, tartare de bœuf — face aux lumières d'Anguilla. Musique live, DJ et fêtes improvisées sur la plage du jeudi au samedi.", "ad": "184 Boulevard de Grand Case, Grand Case, 97150 St. Martin", "p": "+590 690 88 44 61", "w": "", "m": "https://maps.google.com/?q=Captain+Frenchy%E2%80%99s+Grand+Case+St+Martin", "o": ["beach", "casual"], "res": ""}, {"n": "Java", "a": "Grand-Case", "r": "French", "t": "Méditerranéen", "h": "Cuisine méditerranéenne et cocktails, face à la mer.", "d": "Élégant restaurant et bar à cocktails en bord de plage, sur le boulevard de Grand-Case, le Java apporte les saveurs de la Méditerranée dans un cadre caribéen idyllique. La carte propose des plats à partager et des assiettes soignées — homard, pâtes à la truffe, épaule d'agneau confite, filet de bœuf à la Hemingway flambé devant vous. La superbe terrasse en bois face à la mer est le décor parfait pour un cocktail au coucher du soleil ou une soirée musicale.", "ad": "70 Boulevard de Grand Case, Grand Case, 97150 St. Martin", "p": "+590 690 66 68 25", "w": "javasxm.com", "m": "https://maps.google.com/?q=Java+Grand+Case+St+Martin", "o": ["special", "drinks"], "res": "OpenTable"}, {"n": "La Quintessence", "a": "Grand-Case", "r": "French", "t": "Pizzeria et pâtes", "h": "Pizzas artisanales et pâtes fraîches, sans chichi.", "d": "Née de l'équipe de l'adresse originale de Saint-Barth, La Quintessence apporte la pizza au levain artisanal à Grand-Case. Le chef est le seul pizzaïolo de l'île à faire sa propre pâte au levain, maturée dix-huit heures, avec une farine italienne bio d'exception — une base fine, croustillante, remarquablement légère et facile à digérer. Au-delà des pizzas créatives (truffe, burrata), la carte propose des pâtes fraîches servies dans un panier de pâte à pizza, des salades et des calzones. Patio intime et superbe terrasse sur le toit avec vue mer.", "ad": "101 Boulevard de Grand Case, Grand Case, 97150 St. Martin", "p": "+590 690 66 85 00", "w": "", "m": "https://maps.google.com/?q=La+Quintessence+Grand+Case+St+Martin", "o": ["casual"], "res": ""}, {"n": "Le Carpaccio", "a": "Grand-Case", "r": "French", "t": "Italien", "h": "Vraie cuisine italienne, à deux pas du boulevard.", "d": "Une vraie table italienne, discrètement installée dans le centre commercial Parc Phénix, juste à côté de la célèbre rue des restaurants de Grand-Case. La cuisine célèbre la gastronomie italienne traditionnelle : pâtes maison, pizzas au feu de bois garnies de beaux produits comme le jambon de Parme et la mozzarella di bufala, et spécialités de la mer — linguine ai frutti di mare, bar grillé. Une carte des vins italiens choisie et les desserts classiques — tiramisu, panna cotta, cannoli — complètent le tableau. Déjeuner du lundi au samedi.", "ad": "Coral Palm N°11, Parc Phenix, Route de l’Espérance, Grand Case, 97150 St. Martin", "p": "+590 690 50 54 41", "w": "instagram.com/carpaccio_sxm", "m": "https://maps.google.com/?q=Le+Carpaccio+Grand+Case+St+Martin", "o": ["casual"], "res": ""}, {"n": "Le Cool’Heure", "a": "La Savane", "r": "French", "t": "Bistrot créole et français", "h": "Cuisine créole et française familiale, à l'écart des sentiers battus à la Savane.", "d": "La cheffe Betty tient la cuisine de ce petit bistrot de la Savane, avec des plats du jour, de belles pièces de boucherie et ce que le marché offrait le matin même. C'est une cuisine créole et française familiale, sans chichi — le genre d'adresse fréquentée par des habitués plutôt que par les touristes. Gardez de la place pour le dessert du jour, fait maison. Ouvert le midi uniquement, du lundi au samedi, espèces uniquement.", "ad": "123 Route de la Savane, La Savane, 97150 Saint-Martin", "p": "+590 690 34 22 02", "w": "", "m": "https://maps.google.com/?q=Le+Cool%27Heure+La+Savane+St+Martin", "o": ["casual"], "res": ""}, {"n": "Le Marocain", "a": "Marigot", "r": "French", "t": "Restaurant marocain", "h": "Cuisine marocaine authentique et thé à la menthe, au cœur de Marigot.", "d": "Une vraie cuisine marocaine du côté français — tajines, couscous, thé à la menthe — dans une petite salle pleine de charme à Marigot. Ouvert le soir uniquement, du lundi au samedi, réservation par téléphone conseillée car les tables partent vite. Un vrai changement de rythme face aux cartes françaises et créoles habituelles de l'île. Espèces acceptées.", "ad": "169 Rue de Hollande, 97150 Marigot, Saint-Martin", "p": "+590 590 27 54 48", "w": "", "m": "https://maps.google.com/?q=Le+Marocain+SXM+Marigot+St+Martin", "o": ["special"], "res": ""}, {"n": "Le Pressoir", "a": "Grand-Case", "r": "French", "t": "Gastronomique français", "h": "La table gastronomique de Grand Case, dans un ancien pressoir.", "d": "Le joyau de la haute cuisine caribéenne, dans une maison créole centenaire. Le chef Jérôme Droingt a été élu « Restaurant de l'année » Caraïbes 2023/2024 et arrive en tête du Caribbean Fifty Best Restaurants quatre années de suite. Parmi les signatures : le poulpe braisé cinq heures, le wahoo fumé et le filet Rossini à la truffe. Plus de 250 vins et plus de 150 rhums caribéens au bar La Part des Anges complètent l'expérience. Dîner uniquement, du lundi au samedi de 17 h à 23 h.", "ad": "30 Boulevard de Grand Case, Grand Case, 97150 St. Martin", "p": "+590 590 87 76 62", "w": "lepressoirsxm.com", "m": "https://maps.google.com/?q=Le+Pressoir+Grand+Case+St+Martin", "o": ["special"], "res": ""}, {"n": "Le Temps des Cerises", "a": "Grand-Case", "r": "French", "t": "Créole et fruits de mer, en bord de plage", "h": "Cuisine créole et fruits de mer sur la plage de Grand Case, dès le petit-déjeuner.", "d": "Le restaurant de l'hôtel LTC La Plage, directement sur la plage de Grand Case, autour d'une cuisine créole et de ce que les bateaux ramènent — nems de poisson, salade de poulpe, plateaux de fruits de mer généreux. Service en continu dès 8h pour le petit-déjeuner, puis déjeuner et dîner, sept jours sur sept — facile à intégrer à une journée plage. Les tables débordent presque sur le sable, et le cadre fait le reste.", "ad": "158 Boulevard de Grand Case, Grand Case, 97150 Saint-Martin", "p": "+590 590 51 36 27", "w": "ltclaplage.com", "m": "https://maps.google.com/?q=Le+Temps+des+Cerises+Grand+Case+St+Martin", "o": ["beach", "breakfast"], "res": ""}, {"n": "L’Auberge Gourmande", "a": "Grand-Case", "r": "French", "t": "Cuisine française soignée", "h": "Grande cuisine française dans une maison créole du XIXe.", "d": "Installée dans une case créole de cent vingt ans, cette institution de Grand-Case sert une cuisine française soignée depuis 1979. Le chef Alexandre et Chantal proposent les grands classiques avec une chaleur caribéenne — escargots, cuisses de grenouille, soupe à l'oignon, côte de veau, saumon rôti. La carte des vins est longue et le sommelier vous y guide. Lauréate d'un prix « Best of Caribbean » de Caribbean Travel & Life.", "ad": "89 Boulevard de Grand Case, Grand Case, 97150 St. Martin", "p": "+590 590 87 73 37", "w": "laubergegourmande.com", "m": "https://maps.google.com/?q=L%E2%80%99Auberge+Gourmande+Grand+Case+St+Martin", "o": ["special"], "res": ""}, {"n": "MÖKA Café SXM", "a": "Grand-Case", "r": "French", "t": "Brunch et smoothies", "h": "Brunch, smoothies et bon café pour lancer la journée.", "d": "Une jolie nouveauté sur le boulevard de Grand-Case : le MÖKA occupe l'ancien espace du Mood avec une esthétique claire et aérée — arches blanchies à la chaux, bois chaud, atmosphère de café de quartier. La carte de jour, décontractée, fait la part belle aux brunchs copieux et aux smoothies inventifs : l'arrêt du matin idéal avant d'arpenter la rue des restaurants. Ouvert jusqu'à 17 h, cuisine jusqu'à 16 h.", "ad": "48 Boulevard de Grand Case, Grand-Case, 97150 St. Martin", "p": "+590 690 72 83 83", "w": "", "m": "https://maps.google.com/?q=M%C3%96KA+Caf%C3%A9+SXM+Grand+Case+St+Martin", "o": ["breakfast"], "res": ""}, {"n": "Quai 58", "a": "Grand-Case", "r": "French", "t": "Bar à tapas", "h": "Tapas et vins au bord de l'eau, convivial.", "d": "Au bout d'un ponton, l'eau sur trois côtés : ce bar à tapas du chef Frédéric Albas sert de petites assiettes inventives en journée et devient une adresse à cocktails au coucher du soleil. Le poisson-baliste au risotto de cèpes est une signature. Gaby mène une équipe accueillante, avec Agatha au bar et Carole en salle. Le week-end, les DJ donnent le ton à la nuit tombée. Déjeuner de 11 h 30 à 15 h.", "ad": "58 Boulevard de Grand Case", "p": "+590 690 45 14 84", "w": "", "m": "https://maps.google.com/?q=Quai+58+Grand+Case+St+Martin", "o": ["drinks", "casual"], "res": ""}, {"n": "Ô Plongeoir", "a": "Marigot", "r": "French", "t": "Restaurant français et créole", "h": "Plus de vingt ans sur le front de mer de Marigot, les pieds dans la baie.", "d": "Institution du front de mer de Marigot depuis plus de vingt ans, Ô Plongeoir sert une cuisine française et créole avec la baie juste sous la terrasse. Optez pour le tataki de thon teriyaki, les crevettes flambées au pastis, ou de bonnes pâtes aux fruits de mer, et terminez par le digestif maison — le « ti bitin » — offert en fin de repas. Ouvert en continu dès 9h pour le café et les viennoiseries, jusqu'au dîner. Espèces uniquement.", "ad": "13 Boulevard du Docteur Hubert Petit, 97150 Marigot, Saint-Martin", "p": "+590 590 87 94 71", "w": "", "m": "https://maps.google.com/?q=O+Plongeoir+Marigot+St+Martin", "o": ["casual", "special"], "res": ""}, {"n": "3 Amigos", "a": "Baie de Maho", "r": "Dutch", "t": "Tex-Mex et bar sportif", "h": "Tex-Mex, tous les matchs à l'écran, DJ après 22 h.", "d": "Cuisine mexicaine, boissons et sport dans l'adresse Tex-Mex la plus animée du quartier des nuits de Maho. En face du Casino Royale, au premier étage, on y sert un Tex-Mex façon SXM — enchiladas au homard, fajitas de bavette, guacamole préparé à table. Des écrans partout pour tous les matchs, des margaritas frappées à volonté, et quand la cuisine ferme à 22 h les DJ prennent le relais jusque tard. Le mardi, tacos à 2 $ toute la journée.", "ad": "1 Rhine Road, Maho, Sint Maarten", "p": "+1 (721) 545-2563", "w": "", "m": "https://maps.google.com/?q=3+Amigos+Maho+Bay+Sint+Maarten", "o": ["lively"], "res": ""}, {"n": "Babacool", "a": "Simpson Bay", "r": "Dutch", "t": "Beach club", "h": "Le seul beach club de l'île avec piscine.", "d": "Le luxe pieds nus sur la plage de Simpson Bay : Babacool est le seul beach club de l'île avec une piscine. Tout en blanc et rose, entre le Karakter et le Mary's Boon, il est vite devenu l'une des adresses les plus courues de SXM, avec une cuisine soignée sous la direction du chef étoilé Jérôme Ferrer — membre des Grandes Tables du Monde et de Relais & Châteaux. On arrive en voiture, en bateau ou en jet-ski, pour des cocktails, des ceviches et des sessions DJ qui portent l'énergie du plein soleil jusqu'au coucher.", "ad": "121 Simpson Bay Rd", "p": "+1 721 523 8896", "w": "babacoolbeachclub.com", "m": "https://maps.google.com/?q=Babacool+Simpson+Bay+Sint+Maarten", "o": ["beach"], "res": ""}, {"n": "Bamboo House", "a": "Simpson Bay", "r": "Dutch", "t": "Sushis et grillades", "h": "Sushis et grillades dans une maison de maître restaurée.", "d": "Depuis plus de vingt ans, le Bamboo House compte parmi les tables qui définissent la restauration à Sint Maarten. Perché sur Diamond Hill dans un moulin à sucre du XIXᵉ siècle restauré avec soin, il offre une vue panoramique sur Simpson Bay et des couchers de soleil spectaculaires. Ses sushis — élus meilleurs de l'île vingt années de suite — sont préparés par des chefs passés chez Nobu et Morimoto.", "ad": "150 Union Road, Cole Bay, Sint Maarten", "p": "+1 (721) 523-1508", "w": "bamboohouse-sxm.com", "m": "https://maps.google.com/?q=Bamboo+House+Simpson+Bay+Sint+Maarten", "o": ["special"], "res": "OpenTable"}, {"n": "Dinghy Dock", "a": "Simpson Bay", "r": "Dutch", "t": "Bar sportif", "h": "Bières artisanales et joyeux chaos, repaire des marins.", "d": "Un bar de marins caribéen où le charme nautique croise un joyeux désordre. Cette institution de Simpson Bay propose une carte de bières artisanales impressionnante (plus de cent bouteilles et des pressions qui tournent — la meilleure sélection de l'île), des bouteilles posées sur la table pour que vous prépariez vos propres verres, et une cuisine de bar généreuse dont la fameuse rillette de poisson et les beignets de crevettes farcies. L'équipe est chaleureuse et personne ne réserve, ce qui donne une ambiance vraiment locale. Le sport tourne en permanence sur les écrans. Familial en journée, plus animé tard le soir.", "ad": "#46 Airport Road, Simpson Bay, Sint Maarten", "p": "+1 (721) 524-4792", "w": "", "m": "https://maps.google.com/?q=Dinghy+Dock+Simpson+Bay+Sint+Maarten", "o": ["lively", "casual"], "res": ""}, {"n": "Grumpy’s", "a": "Philipsburg", "r": "Dutch", "t": "Bar sportif et musique", "h": "Bar sportif et musical décontracté, près de la marina.", "d": "Une adresse de quartier très fréquentée, au Dock Maarten, près du port de plaisance de Philipsburg. Ce bar sport et musique sans façons est le point de ralliement des habitants comme des visiteurs qui cherchent des boissons fraîches, une bonne ambiance et une pause loin des foules de touristes. Entre le port de croisière et le centre-ville : parfaitement placé pour une halte en découvrant la capitale néerlandaise.", "ad": "26 Juancho Yrausquin Blvd, Dock Maarten", "p": "+1 (721) 542-2167", "w": "visitstmaarten.com", "m": "https://maps.google.com/?q=Grumpy%E2%80%99s+Philipsburg+Sint+Maarten", "o": ["lively"], "res": ""}, {"n": "Momohana", "a": "Cole Bay", "r": "Dutch", "t": "Fusion asiatique", "h": "Fusion asiatique à Cole Bay, dressée comme une œuvre d'art.", "d": "Une adresse plus récente à Cole Bay, pour une cuisine fusion asiatique construite sur une technique européenne — la cuisine parle d'un « opus » du jour, selon ce qu'il y a de plus frais le matin même. La salle et le dressage visent plutôt haut de gamme pour le quartier. Ouvert le midi du lundi au samedi, de 12h à 15h, et le soir de 18h à 21h30.", "ad": "ARK Building, Diamond Estate, Red Plum Tree, 7 Union Road, Cole Bay, Sint Maarten", "p": "+1 721 580 3986", "w": "momohanasxm.com", "m": "https://maps.google.com/?q=Momohana+Cole+Bay+Sint+Maarten", "o": ["casual"], "res": ""}, {"n": "Ratafia", "a": "Cupecoy", "r": "Dutch", "t": "Bar à cocktails et salon", "h": "Cocktails d'exception et terrasse face au coucher de soleil.", "d": "Un bar à cocktails raffiné à Porto Cupecoy, où Max, mixologue et propriétaire, compose des cocktails haut de gamme accompagnés de grands vins, de champagne, de cigares et de caviar. La terrasse face à la mer est le meilleur poste pour le coucher du soleil. Chaque semaine : margaritas deux pour une le lundi, cocktails tiki deux pour un le mardi, DJ le samedi à partir de 22 h. Ouvert du mercredi au samedi de 17 h 30 à 2 h ou 3 h, et jusqu'à 1 h les mardi, jeudi et dimanche.", "ad": "1 Niger Road, Top Floor, Cupecoy Bay", "p": "", "w": "ratafiasxm.com", "m": "https://maps.google.com/?q=Ratafia+Cupecoy+Sint+Maarten", "o": ["drinks"], "res": ""}, {"n": "Sexy Beef", "a": "Philipsburg", "r": "Dutch", "t": "Lolo, grillades créoles", "h": "Lolo de bord de route devenu légende — grillades créoles.", "d": "Un lolo — une gargote de bord de route — devenu culte auprès des visiteurs comme des habitants. Le nom, malicieux, vient du surnom que le compagnon de la patronne lui donnait. La vedette, c'est le satay : brochettes de bœuf, de poulet et de porc nappées d'une sauce cacahuète veloutée dont vous redemanderez pour y tremper frites et tostones. L'un des rares lolos à avoir un vrai bar, et beaucoup y voient les meilleures margaritas des Caraïbes. Le week-end, l'ambiance monte d'un cran.", "ad": "Front Street 28, Philipsburg, Sint Maarten", "p": "+1 (721) 549-0200", "w": "vacationstmaarten.com/listing/sexy-beef", "m": "https://maps.google.com/?q=Sexy+Beef+Philipsburg+Sint+Maarten", "o": ["casual"], "res": ""}, {"n": "Sint Maarten Yacht Club Bar & Restaurant", "a": "Simpson Bay", "r": "Dutch", "t": "Bar-restaurant du yacht club", "h": "Aux premières loges pour les méga-yachts, au pont de Simpson Bay.", "d": "Juste au pont de Simpson Bay, avec le ponton du bas qui vous met au plus près des méga-yachts qui passent. Ouvert toute la journée, de 7h à minuit, du petit-déjeuner (et leurs fameux eggs Benedict) jusqu'à l'happy hour et le dîner. Consultez les horaires d'ouverture du pont affichés si vous voulez voir les bateaux manœuvrer. Décontracté, facile, très prisé des marins.", "ad": "90 Welfare Road, Simpson Bay, Sint Maarten", "p": "+1 721 544 1056", "w": "smycbarandrestaurant.com", "m": "https://maps.google.com/?q=Sint+Maarten+Yacht+Club+Bar+Restaurant+Simpson+Bay", "o": ["breakfast", "casual", "drinks", "lively"], "res": ""}, {"n": "Zee Best Bakeshop", "a": "Simpson Bay", "r": "Dutch", "t": "Boulangerie et traiteur", "h": "Boulangerie française près de l'aéroport, depuis 1983.", "d": "La boutique à emporter du Zee Best, sur Airport Road, à deux pas de l'aéroport Princess Juliana. Depuis 1983, cette maison familiale est une référence pour ses viennoiseries françaises cuites chaque matin — croissants aux amandes feuilletés, petits pains au chocolat, roulés à la cannelle, scones. On y trouve aussi des sandwichs soignés, des quiches, des salades, des smoothies et des gâteaux sur commande. La halte idéale avant un vol, ou pour emporter de quoi tenir la journée.", "ad": "#100 Airport Road, Simpson Bay, Sint Maarten", "p": "+1 (721) 553-6863", "w": "zeebestrestaurant.com", "m": "https://maps.google.com/?q=Zee+Best+Bakeshop+Simpson+Bay+Sint+Maarten", "o": ["breakfast"], "res": ""}], OCC=[["walk", "À deux pas de la villa"], ["beach", "Plages et déjeuners"], ["special", "Grandes tables"], ["casual", "Simple et local"], ["breakfast", "Petit-déjeuner et boulangerie"], ["drinks", "Apéro et soirée"], ["lively", "Ambiance et sport"]], AREA=["Baie Orientale", "Grand-Case", "Simpson Bay", "Philipsburg", "Cupecoy", "Baie de Maho", "Oyster Pond"];
+let mode='occ', filter=null;
+const chips=document.getElementById('chips'), list=document.getElementById('list');
+function groups(){ return mode==='occ' ? OCC.map(o=>[o[0],o[1]]) : AREA.map(a=>[a,a]); }
+function inGroup(v,key){ return mode==='occ' ? v.o.includes(key) : v.a===key; }
+function esc(s){ return (s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function card(v){
+  const bits=[]; if(v.ad) bits.push(esc(v.ad)); if(v.p) bits.push(esc(v.p));
+  const acts=['<a class="go" href="'+esc(v.m)+'" target="_blank" rel="noopener">Itinéraire</a>'];
+  if(v.p) acts.push('<a href="tel:'+v.p.replace(/[^+0-9]/g,'')+'">Appeler</a>');
+  if(v.w) acts.push('<a href="https://'+esc(v.w.replace(/^https?:\/\//,''))+'" target="_blank" rel="noopener">Site</a>');
+  acts.push('<span class="more">Plus</span>');
+  return '<article><h3>'+esc(v.n)+'</h3><span class="pill">'+esc(v.t)+'</span>'
+   +'<p class="hook">'+esc(v.h)+'</p>'
+   +v.d.split('\n\n').map(t=>'<p class="desc">'+esc(t)+'</p>').join('')
+   +(v.pr?'<p class="desc">'+esc(v.pr)+'</p>':'')
+   +(bits.length?'<p class="meta">'+bits.join(' &middot; ')+'</p>':'')
+   +'<div class="actions">'+acts.join('')+'</div></article>';
+}
+function render(){
+  chips.innerHTML = groups().map(([k,label])=>
+    '<button data-k="'+esc(k)+'" aria-pressed="'+(filter===k)+'">'+esc(label)+'</button>').join('');
+  const gs = filter ? groups().filter(g=>g[0]===filter) : groups();
+  let html='';
+  for(const [k,label] of gs){
+    const vs=DATA.filter(v=>inGroup(v,k));   // DATA is already in villa-first order
+    if(!vs.length) continue;
+    html += '<h2>'+esc(label)+'</h2>' + vs.map(card).join('');
+  }
+  list.innerHTML = html || '<p class="empty">Nothing here yet.</p>';
+  if (typeof chipEnd === 'function') chipEnd();
+}
+/* D1. `aria-pressed` alone did not re-style the button in the renderer the audit
+   ran in - the attribute flipped, the list reordered, and the computed
+   background did not move; only replacing the node fixed it. So the class is set
+   too, and the CSS rule keys off either. The attribute stays because it is what
+   assistive tech reads; the class is what the eye gets. Still to confirm on a
+   real phone - VN_STATE §3. */
+function sync(){
+  const t1=document.getElementById('tab-occ'), t2=document.getElementById('tab-area');
+  t1.setAttribute('aria-pressed', mode==='occ'); t1.classList.toggle('on', mode==='occ');
+  t2.setAttribute('aria-pressed', mode==='area'); t2.classList.toggle('on', mode==='area');
+  render();
+}
+/* D8: the fade goes away when there is nothing more to scroll to, so it is a
+   cue and not decoration. */
+const chipwrap=document.getElementById('chipwrap');
+function chipEnd(){ chipwrap.classList.toggle('end',
+  chips.scrollLeft + chips.clientWidth >= chips.scrollWidth - 2); }
+chips.addEventListener('scroll', chipEnd);
+window.addEventListener('resize', chipEnd);
+document.getElementById('tab-occ').onclick=()=>{mode='occ';filter=null;sync();};
+document.getElementById('tab-area').onclick=()=>{mode='area';filter=null;sync();};
+chips.addEventListener('click',e=>{ const b=e.target.closest('button'); if(!b)return;
+  filter = filter===b.dataset.k ? null : b.dataset.k; render(); });
+list.addEventListener('click',e=>{ const m=e.target.closest('.more'); if(!m)return;
+  const a=m.closest('article'); a.classList.toggle('open');
+  m.textContent=a.classList.contains('open')?'Moins':'Plus'; });
+sync();
+</script>
+
+<aside class="nudge" id="nudge" hidden>
+  <img src="../apple-touch-icon.png" alt="">
+  <div class="t">
+    <b>Gardez le guide sur votre téléphone</b>
+    <p>Ajoutez-le à votre écran d'accueil : il s'ouvre comme une application — une touche, sans navigateur, et vous le retrouvez sans réseau.</p>
+    <div class="ios" id="nudge-ios" hidden><span class="arrow">&darr;</span>Appuyez sur Partager, puis <em>Sur l'écran d'accueil</em></div>
+    <div class="row" id="nudge-row">
+      <button class="add" id="nudge-add" hidden>Ajouter à l'écran d'accueil</button>
+      <button class="no" id="nudge-no">Plus tard</button>
+    </div>
+  </div>
+</aside>
+<script>
+(function(){
+  var KEY='vn-nudge-seen';
+  try{ if(localStorage.getItem(KEY)) return; }catch(e){ return; }   /* private mode: stay quiet */
+  var el=document.getElementById('nudge');
+  var phone = window.matchMedia('(max-width:520px)').matches &&
+              window.matchMedia('(pointer:coarse)').matches;
+  if(!phone) return;
+  var standalone = window.matchMedia('(display-mode:standalone)').matches ||
+                   window.navigator.standalone === true;
+  if(standalone) return;                                            /* already saved */
+  var ios = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  var prompt=null;
+  window.addEventListener('beforeinstallprompt', function(e){
+    e.preventDefault(); prompt=e;
+    document.getElementById('nudge-add').hidden=false;
+  });
+  function seen(){ try{ localStorage.setItem(KEY,'1'); }catch(e){} }
+  function hide(){ el.classList.remove('up'); seen();
+    setTimeout(function(){ el.hidden=true; }, 350); }
+  document.getElementById('nudge-no').onclick=hide;
+  document.getElementById('nudge-add').onclick=function(){
+    if(prompt){ prompt.prompt(); prompt=null; }
+    hide();
+  };
+  /* Never on first paint. Four seconds is long enough that the page has been
+     LOOKED at - the offer only makes sense once you know what you are keeping. */
+  setTimeout(function(){
+    /* Nothing to offer here: not iOS, and this browser never fired
+       `beforeinstallprompt`. Say nothing rather than show a card whose only
+       content is a dismiss button - the first draft hid the whole button row in
+       this case, which left a card with NO way to close it. The flag is not set
+       either, so a browser that offers the prompt on a later visit still gets
+       one chance. */
+    if(!ios && !prompt) return;
+    if(ios){ document.getElementById('nudge-ios').hidden=false;
+             el.classList.add('ios-mode'); }
+    el.hidden=false;
+    /* A timeout, not `requestAnimationFrame`: both work to flush style between
+       un-hiding and adding the class, but rAF does not fire in a throttled or
+       backgrounded tab, and a card left permanently translated off the bottom
+       of the screen is an offer that silently never happens. */
+    setTimeout(function(){ el.classList.add('up'); }, 20);
+    /* Shown counts as seen: it is a one-time offer, not a nag that waits for
+       an answer. A guest who scrolls past it has answered. */
+    seen();
+  }, 4000);
+})();
+</script>
+
+</body>
+</html>
