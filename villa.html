@@ -58,6 +58,17 @@ a:focus-visible,button:focus-visible,.more:focus-visible{
    were 30-39px, not to prose links inside a paragraph, which have no box. */
 .tap{display:inline-flex;align-items:center;justify-content:center;
  min-height:var(--tap)}
+/* The way back into the other language. It lived in LANDING_CSS while only the
+   two front doors and The Villa had one; it is in the BASE block from 21 Sep
+   because the three listings carry it in their footer too, and one rule in one
+   place is the whole argument for the base block existing. */
+.langline{text-align:center;margin:var(--s-section) 0 0}
+/* The underline is `text-decoration`, not `border-bottom`: the 44px tap box
+   (§7.5.6b) draws a border at the bottom of the BOX, which put the rule 13px
+   under the word and made it look like a stray line. */
+.langline .lang{display:inline-flex;align-items:center;justify-content:center;min-height:var(--tap);
+ padding:0 var(--s-base);font-size:var(--fs-meta);font-weight:600;color:var(--teal);
+ text-decoration:underline;text-decoration-color:rgba(57,97,110,.4);text-underline-offset:4px}
 
 .nudge{position:fixed;left:var(--s-base);right:var(--s-base);bottom:var(--s-base);z-index:60;
  max-width:520px;margin:0 auto;background:var(--card);border-radius:var(--r-card);
@@ -146,13 +157,6 @@ footer img{width:36px;opacity:.75;display:block;margin:0 auto var(--s-base)}
  margin:var(--s-comfortable) auto 0;font-size:var(--fs-meta);
  color:var(--teal);text-decoration:none;font-weight:600}
 .backrow{text-align:center}
-.langline{text-align:center;margin:var(--s-section) 0 0}
-/* The underline is `text-decoration`, not `border-bottom`: the 44px tap box
-   (§7.5.6b) draws a border at the bottom of the BOX, which put the rule 13px
-   under the word and made it look like a stray line. */
-.langline .lang{display:inline-flex;align-items:center;justify-content:center;min-height:var(--tap);
- padding:0 var(--s-base);font-size:var(--fs-meta);font-weight:600;color:var(--teal);
- text-decoration:underline;text-decoration-color:rgba(57,97,110,.4);text-underline-offset:4px}
 </style>
 </head>
 <body>
