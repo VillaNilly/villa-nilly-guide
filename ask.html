@@ -175,13 +175,21 @@ footer img{width:36px;opacity:.75;display:block;margin:0 auto var(--s-base)}
   text-transform:uppercase;padding:var(--s-base) var(--s-section);border:0;
   border-radius:var(--r-pill);background:var(--teal);color:var(--card);cursor:pointer;}
 .ask button[disabled]{opacity:.6;cursor:default;}
-.ask .out{margin-top:var(--s-base);padding:var(--s-comfortable);border-radius:var(--r-card);
-  background:var(--card);border:1px solid var(--line);font-size:var(--fs-body);
-  line-height:var(--lh-open);color:var(--ink);text-align:left;}
+.ask .out{margin-top:var(--s-base);}
 .ask .out[hidden]{display:none;}
-.ask .out p{margin:0 0 var(--s-snug);}
-.ask .out p:last-child{margin:0;}
-.ask .out a{color:var(--teal);}
+.ask .ex{margin-bottom:var(--s-snug);padding:var(--s-comfortable);
+  border-radius:var(--r-card);background:var(--card);border:1px solid var(--line);
+  text-align:left;}
+.ask .ex .q{margin:0 0 var(--s-snug);padding-bottom:var(--s-snug);
+  border-bottom:1px solid var(--line);font-size:var(--fs-meta);color:var(--muted);}
+.ask .ex .a{font-size:var(--fs-body);line-height:var(--lh-open);color:var(--ink);}
+.ask .ex .a p{margin:0 0 var(--s-snug);}
+.ask .ex .a p:last-child{margin:0;}
+.ask .ex .a a{color:var(--teal);}
+.ask .new{margin:0;text-align:left;}
+.ask .new button{background:none;border:0;color:var(--muted);font-size:var(--fs-meta);
+  text-transform:none;letter-spacing:0;font-weight:400;padding:var(--s-snug) 0;
+  min-height:var(--tap);cursor:pointer;}
 .ask .egs{margin:var(--s-base) 0 0;font-size:var(--fs-meta);color:var(--muted);text-align:left;}
 .ask .egs b{display:block;font-weight:600;margin-bottom:var(--s-tight);
   text-transform:uppercase;letter-spacing:.06em;}
@@ -218,7 +226,72 @@ footer img{width:36px;opacity:.75;display:block;margin:0 auto var(--s-base)}
 </header>
 <p class="lede">Anything about the villa or the island. We answer from our own list first, then from what we know about the island.</p>
 <section class="ask"><form id="askf"><input id="askq" type="text" autocomplete="off" placeholder="Ask us anything about the villa or the island" aria-label="Ask us anything about the villa or the island"><button id="askb" type="submit">Ask</button></form><div class="out" id="asko" hidden></div><div class="egs"><b>For example</b><button type="button" data-q="Where would you go for dinner on a Saturday?">Where would you go for dinner on a Saturday?</button><button type="button" data-q="Which beach is calmest for small children?">Which beach is calmest for small children?</button><button type="button" data-q="Is there a supermarket open on Sunday?">Is there a supermarket open on Sunday?</button><button type="button" data-q="What time is check-out?">What time is check-out?</button><button type="button" data-q="Where can we watch the planes land?">Where can we watch the planes land?</button></div></section>
-<script>(function(){var f=document.getElementById("askf"),q=document.getElementById("askq"),b=document.getElementById("askb"),o=document.getElementById("asko");function esc(s){return s.replace(/[&<>"]/g,function(ch){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[ch];});}function md(s){return esc(s).replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g,'<a href="$2" rel="noopener">$1</a>').split(/\n{2,}/).map(function(p){return "<p>"+p.replace(/\n/g,"<br>")+"</p>";}).join("");}function ask(text){if(!text)return;o.hidden=false;o.textContent="Thinking\u2026";b.disabled=true;fetch("https://villa-nilly-concierge.bitter-bread-1a39.workers.dev/",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({q:text,lang:"en"})}).then(function(r){return r.json();}).then(function(d){o.innerHTML=md(d.answer||"We couldn't reach the concierge just now. Message us on WhatsApp and we'll answer ourselves.");}).catch(function(){o.textContent="We couldn't reach the concierge just now. Message us on WhatsApp and we'll answer ourselves.";}).then(function(){b.disabled=false;});}f.addEventListener("submit",function(e){e.preventDefault();ask(q.value.trim());});Array.prototype.forEach.call(document.querySelectorAll(".egs button"),function(el){el.addEventListener("click",function(){q.value=el.getAttribute("data-q");ask(q.value);});});})();</script>
+<script>(function(){
+var f=document.getElementById("askf"),q=document.getElementById("askq"),
+b=document.getElementById("askb"),o=document.getElementById("asko"),
+e=document.querySelector(".ask .egs");
+var KEY="vn.ask.thread",MAX=6,EP="https://villa-nilly-concierge.bitter-bread-1a39.workers.dev/",LANG="en",
+THINKING="Thinking\u2026",FAIL="We couldn't reach the concierge just now. Message us on WhatsApp and we'll answer ourselves.",NEWQ="New question";
+/* sessionStorage can throw outright (a locked-down browser, private mode), so
+   every read and write is wrapped and the thread simply lives in T for that
+   visit. The box works with no storage at all; it just forgets on a reload. */
+function load(){try{var v=JSON.parse(sessionStorage.getItem(KEY)||"[]");
+return Object.prototype.toString.call(v)==="[object Array]"?v:[];}catch(x){return [];}}
+function save(){try{sessionStorage.setItem(KEY,JSON.stringify(T));}catch(x){}}
+var T=load(),pend=null;
+/* A four-line markdown renderer: escape everything, then turn [x](y) into a link
+   and blank lines into paragraphs. Nothing else is honoured, which is what the
+   prompt asks the model for. A question is never run through it - it is the
+   guest's own text and goes in as textContent. */
+function esc(s){return s.replace(/[&<>"]/g,function(ch){
+return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[ch];});}
+function md(s){return esc(s)
+.replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g,'<a href="$2" rel="noopener">$1</a>')
+.split(/\n{2,}/).map(function(p){return "<p>"+p.replace(/\n/g,"<br>")+"</p>";})
+.join("");}
+function card(text,answer,rich){var d=document.createElement("div");d.className="ex";
+var qe=document.createElement("p");qe.className="q";qe.textContent=text;d.appendChild(qe);
+var ae=document.createElement("div");ae.className="a";
+if(rich){ae.innerHTML=md(answer);}else{ae.textContent=answer;}
+d.appendChild(ae);return d;}
+/* NEWEST AT THE BOTTOM, AND THE INPUT DOES NOT MOVE. The exchanges stack under
+   the box in the order they were asked, so the thread reads like a conversation
+   and the cards below it are pushed down - the same shape as one answer in
+   place, repeated. With an empty thread nothing is drawn at all, which is what
+   keeps the fold check the same as it was. */
+function render(){var i,last=null;
+while(o.firstChild)o.removeChild(o.firstChild);
+for(i=0;i<T.length;i++){last=card(T[i].q,T[i].a,true);o.appendChild(last);}
+if(pend){last=card(pend.q,pend.a,false);o.appendChild(last);}
+if(T.length||pend){
+var p=document.createElement("p");p.className="new";
+var nb=document.createElement("button");nb.type="button";nb.textContent=NEWQ;
+nb.addEventListener("click",function(){T=[];pend=null;save();render();q.focus();});
+p.appendChild(nb);o.appendChild(p);o.hidden=false;}else{o.hidden=true;}
+/* The starter questions are for an empty box. Once there is a thread they are
+   clutter, and tapping one mid-conversation reads as a non-sequitur follow-up. */
+if(e)e.hidden=!!(T.length||pend);
+return last;}
+function ask(text){if(!text||b.disabled)return;
+pend={q:text,a:THINKING};b.disabled=true;render();
+fetch(EP,{method:"POST",headers:{"content-type":"application/json"},
+body:JSON.stringify({q:text,lang:LANG,history:T.slice(-MAX)})})
+.then(function(r){return r.json();})
+.then(function(d){if(d&&d.answer){T.push({q:text,a:d.answer});
+if(T.length>MAX)T=T.slice(-MAX);pend=null;save();q.value="";}
+else{pend={q:text,a:FAIL};}})
+/* A call that failed is NOT an exchange. It never reaches T, so the next
+   question is not answered against an error message. */
+.catch(function(){pend={q:text,a:FAIL};})
+.then(function(){b.disabled=false;var el=render();
+if(el){try{var r=el.getBoundingClientRect();
+if(r.bottom>(window.innerHeight||0))el.scrollIntoView({block:"end"});}catch(x){}}});}
+f.addEventListener("submit",function(ev){ev.preventDefault();ask(q.value.trim());});
+Array.prototype.forEach.call(document.querySelectorAll(".egs button"),
+function(el){el.addEventListener("click",function(){
+q.value=el.getAttribute("data-q");ask(q.value);});});
+render();
+})();</script>
 <footer><img src="mark.png" alt="">Our own picks, kept up to date.<br>Villa Nilly &middot; Baie Orientale</footer>
 
 <aside class="nudge" id="nudge" hidden>
