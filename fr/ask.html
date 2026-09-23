@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Villa Nilly — Orient Bay, St. Martin</title>
-<meta name="description" content="Villa Nilly, Parc de la Baie Orientale, Orient Bay, Saint-Martin. The villa’s own site is on its way.">
+<title>Villa Nilly — Demandez-nous</title>
+<meta name="description" content="Posez vos questions au concierge de la Villa Nilly, sur la villa ou sur Saint-Martin / Sint Maarten.">
 <meta name="theme-color" content="#39616E">
-<link rel="canonical" href="https://villanilly.github.io/villa-nilly-guide/villa.html">
-<link rel="alternate" hreflang="en" href="https://villanilly.github.io/villa-nilly-guide/villa.html">
-<link rel="alternate" hreflang="fr" href="https://villanilly.github.io/villa-nilly-guide/fr/villa.html">
-<link rel="alternate" hreflang="x-default" href="https://villanilly.github.io/villa-nilly-guide/villa.html">
+<link rel="canonical" href="https://villanilly.github.io/villa-nilly-guide/fr/ask.html">
+<link rel="alternate" hreflang="en" href="https://villanilly.github.io/villa-nilly-guide/ask.html">
+<link rel="alternate" hreflang="fr" href="https://villanilly.github.io/villa-nilly-guide/fr/ask.html">
+<link rel="alternate" hreflang="x-default" href="https://villanilly.github.io/villa-nilly-guide/ask.html">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Villa Nilly">
-<meta property="og:title" content="Villa Nilly — Orient Bay, St. Martin">
-<meta property="og:description" content="Villa Nilly, Parc de la Baie Orientale, Orient Bay, Saint-Martin. The villa’s own site is on its way.">
-<meta property="og:url" content="https://villanilly.github.io/villa-nilly-guide/villa.html">
+<meta property="og:title" content="Villa Nilly — Demandez-nous">
+<meta property="og:description" content="Posez vos questions au concierge de la Villa Nilly, sur la villa ou sur Saint-Martin / Sint Maarten.">
+<meta property="og:url" content="https://villanilly.github.io/villa-nilly-guide/fr/ask.html">
 <meta property="og:image" content="https://villanilly.github.io/villa-nilly-guide/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="The pool and gallery at Villa Nilly, Orient Bay, St. Martin">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Villa Nilly — Orient Bay, St. Martin">
-<meta name="twitter:description" content="Villa Nilly, Parc de la Baie Orientale, Orient Bay, Saint-Martin. The villa’s own site is on its way.">
+<meta name="twitter:title" content="Villa Nilly — Demandez-nous">
+<meta name="twitter:description" content="Posez vos questions au concierge de la Villa Nilly, sur la villa ou sur Saint-Martin / Sint Maarten.">
 <meta name="twitter:image" content="https://villanilly.github.io/villa-nilly-guide/og.jpg">
-<link rel="icon" href="mark.png">
+<link rel="icon" href="../mark.png">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <meta name="apple-mobile-web-app-title" content="Villa Nilly">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -103,7 +103,7 @@ a:focus-visible,button:focus-visible,.more:focus-visible{
 .hero{position:relative;min-height:290px;display:flex;flex-direction:column;align-items:center;
  justify-content:center;text-align:center;padding:44px var(--s-section) 36px;overflow:hidden;
  max-width:1280px;margin:0 auto}
-.hero::before{content:"";position:absolute;inset:0;background:url(hero.jpg) center 42%/cover;transform:scale(1.02)}
+.hero::before{content:"";position:absolute;inset:0;background:url(../hero.jpg) center 42%/cover;transform:scale(1.02)}
 .hero::after{content:"";position:absolute;inset:0;
  background:linear-gradient(180deg,rgba(34,52,59,.62) 0%,rgba(57,97,110,.66) 55%,rgba(57,97,110,.82) 100%)}
 .hero>*{position:relative;z-index:1}
@@ -157,34 +157,79 @@ footer img{width:36px;opacity:.75;display:block;margin:0 auto var(--s-base)}
  margin:var(--s-comfortable) auto 0;font-size:var(--fs-meta);
  color:var(--teal);text-decoration:none;font-weight:600}
 .backrow{text-align:center}
+
+.hero{min-height:196px;padding:var(--s-section)}
+.hero img{margin-bottom:var(--s-snug)}
+.hero .rule{margin-top:var(--s-base)}
+@media(min-width:620px){.hero{min-height:240px}}
+.lede{padding-top:var(--s-comfortable)}
+.doors a{padding:var(--s-snug) var(--s-comfortable);margin-bottom:var(--s-tight)}
+
+.ask{max-width:760px;margin:0 auto var(--s-base);padding:0 var(--s-comfortable);}
+.ask form{display:flex;gap:var(--s-snug);}
+.ask input{flex:1 1 auto;min-width:0;font:inherit;font-size:var(--fs-body);
+  padding:var(--s-base) var(--s-comfortable);border:1px solid var(--line);
+  border-radius:var(--r-pill);background:var(--card);color:var(--ink);}
+.ask input:focus{outline:2px solid var(--teal);outline-offset:1px;}
+.ask button{font:inherit;font-size:var(--fs-label);font-weight:700;letter-spacing:.04em;
+  text-transform:uppercase;padding:var(--s-base) var(--s-section);border:0;
+  border-radius:var(--r-pill);background:var(--teal);color:var(--card);cursor:pointer;}
+.ask button[disabled]{opacity:.6;cursor:default;}
+.ask .out{margin-top:var(--s-base);padding:var(--s-comfortable);border-radius:var(--r-card);
+  background:var(--card);border:1px solid var(--line);font-size:var(--fs-body);
+  line-height:var(--lh-open);color:var(--ink);text-align:left;}
+.ask .out[hidden]{display:none;}
+.ask .out p{margin:0 0 var(--s-snug);}
+.ask .out p:last-child{margin:0;}
+.ask .out a{color:var(--teal);}
+.ask .egs{margin:var(--s-base) 0 0;font-size:var(--fs-meta);color:var(--muted);text-align:left;}
+.ask .egs b{display:block;font-weight:600;margin-bottom:var(--s-tight);
+  text-transform:uppercase;letter-spacing:.06em;}
+.ask .egs button{display:block;width:100%;text-align:left;background:none;border:0;
+  color:var(--muted);font-size:var(--fs-meta);text-transform:none;letter-spacing:0;
+  font-weight:400;padding:var(--s-tight) 0;cursor:pointer;}
 </style>
 </head>
 <body>
+<script>
+(function(){
+  var K='vn-lang', MINE='fr', OTHER='en';
+  function fromFr(){
+    try{ return !!document.referrer &&
+      new URL(document.referrer).pathname.indexOf('/fr/') > -1; }catch(e){ return false; }
+  }
+  try{
+    if(MINE==='fr'){ localStorage.setItem(K,'fr'); }
+    else if(localStorage.getItem(K)==='fr' && !fromFr()){ location.replace('fr/'); return; }
+  }catch(e){}
+  document.addEventListener('click',function(e){
+    var t=e.target;
+    if(t && t.closest && t.closest('.langline .lang')){
+      try{ localStorage.setItem(K,OTHER); }catch(e){}
+    }
+  });
+})();
+</script>
 <header class="hero">
-  <img src="mark-white.png" alt="Villa Nilly">
-  <h1>Villa Nilly</h1>
-  <p>Orient Bay &middot; Saint-Martin</p>
+  <img src="../mark-white.png" alt="Villa Nilly">
+  <h1>Demandez-nous</h1>
+  <p>Villa Nilly &middot; Saint-Martin</p>
   <div class="rule"></div>
 </header>
-<div class="plate"><div class="card">
-<address><b>Villa Nilly</b><br>N°1 Résidence Arawa, Rue Caye Baie<br>Parc de la Baie Orientale, Orient Bay<br>97150 Saint-Martin</address>
-<hr>
-<p>The villa’s own site is on its way.</p>
-<a class="btn" href="https://wa.me/13183489696" target="_blank" rel="noopener">Message us on WhatsApp</a>
-</div>
-<p class="backrow"><a class="back" href="./">&larr; The island guide</a></p>
-<p class="langline"><a class="lang" href="fr/villa.html" hreflang="fr" lang="fr" rel="alternate">Français</a></p></div>
-<footer><img src="mark.png" alt="">Villa Nilly &middot; Baie Orientale</footer>
+<p class="lede">Tout sur la villa ou sur l’île. Nous répondons d’abord avec notre liste, puis avec ce que nous savons de l’île.</p>
+<section class="ask"><form id="askf"><input id="askq" type="text" autocomplete="off" placeholder="Demandez-nous tout sur la villa ou sur l’île" aria-label="Demandez-nous tout sur la villa ou sur l’île"><button id="askb" type="submit">Demander</button></form><div class="out" id="asko" hidden></div><div class="egs"><b>Par exemple</b><button type="button" data-q="Où dîner un samedi soir ?">Où dîner un samedi soir ?</button><button type="button" data-q="Quelle plage est la plus calme pour de jeunes enfants ?">Quelle plage est la plus calme pour de jeunes enfants ?</button><button type="button" data-q="Y a-t-il un supermarché ouvert le dimanche ?">Y a-t-il un supermarché ouvert le dimanche ?</button><button type="button" data-q="À quelle heure est le départ ?">À quelle heure est le départ ?</button><button type="button" data-q="Où voir les avions atterrir ?">Où voir les avions atterrir ?</button></div></section>
+<script>(function(){var f=document.getElementById("askf"),q=document.getElementById("askq"),b=document.getElementById("askb"),o=document.getElementById("asko");function esc(s){return s.replace(/[&<>"]/g,function(ch){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[ch];});}function md(s){return esc(s).replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g,'<a href="$2" rel="noopener">$1</a>').split(/\n{2,}/).map(function(p){return "<p>"+p.replace(/\n/g,"<br>")+"</p>";}).join("");}function ask(text){if(!text)return;o.hidden=false;o.textContent="Un instant\u2026";b.disabled=true;fetch("https://villa-nilly-concierge.bitter-bread-1a39.workers.dev/",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({q:text,lang:"fr"})}).then(function(r){return r.json();}).then(function(d){o.innerHTML=md(d.answer||"Nous n\u2019avons pas pu joindre le concierge. \u00c9crivez-nous sur WhatsApp et nous r\u00e9pondrons nous-m\u00eames.");}).catch(function(){o.textContent="Nous n\u2019avons pas pu joindre le concierge. \u00c9crivez-nous sur WhatsApp et nous r\u00e9pondrons nous-m\u00eames.";}).then(function(){b.disabled=false;});}f.addEventListener("submit",function(e){e.preventDefault();ask(q.value.trim());});Array.prototype.forEach.call(document.querySelectorAll(".egs button"),function(el){el.addEventListener("click",function(){q.value=el.getAttribute("data-q");ask(q.value);});});})();</script>
+<footer><img src="../mark.png" alt="">Nos adresses à nous, tenues à jour.<br>Villa Nilly &middot; Baie Orientale</footer>
 
 <aside class="nudge" id="nudge" hidden>
-  <img src="apple-touch-icon.png" alt="">
+  <img src="../apple-touch-icon.png" alt="">
   <div class="t">
-    <b>Keep this on your phone</b>
-    <p>Add the guide to your home screen and it opens like an app — one tap, no browser, no signal needed to find it again.</p>
-    <div class="ios" id="nudge-ios" hidden><span class="arrow">&darr;</span>Tap Share, then <em>Add to Home Screen</em></div>
+    <b>Gardez le guide sur votre téléphone</b>
+    <p>Ajoutez-le à votre écran d'accueil : il s'ouvre comme une application — une touche, sans navigateur, et vous le retrouvez sans réseau.</p>
+    <div class="ios" id="nudge-ios" hidden><span class="arrow">&darr;</span>Appuyez sur Partager, puis <em>Sur l'écran d'accueil</em></div>
     <div class="row" id="nudge-row">
-      <button class="add" id="nudge-add" hidden>Add to home screen</button>
-      <button class="no" id="nudge-no">Not now</button>
+      <button class="add" id="nudge-add" hidden>Ajouter à l'écran d'accueil</button>
+      <button class="no" id="nudge-no">Plus tard</button>
     </div>
   </div>
 </aside>

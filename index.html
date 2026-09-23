@@ -123,9 +123,9 @@ footer img{width:36px;opacity:.75;display:block;margin:0 auto var(--s-base)}
 @media(min-width:620px){.hero{min-height:340px}.hero h1{font-size:var(--fs-reading)}}
 
 /* L3: both of these are prose, and §7.5.2 says prose is one size. */
-.lede{max-width:760px;margin:0 auto;padding:var(--s-section) var(--s-comfortable) var(--s-tight);
+.lede{max-width:760px;margin:0 auto;padding:var(--s-base) var(--s-comfortable) var(--s-tight);
  text-align:center;font-size:var(--fs-body);color:var(--muted)}
-.doors{max-width:760px;margin:0 auto;padding:var(--s-base) var(--s-comfortable) var(--s-snug)}
+.doors{max-width:760px;margin:0 auto;padding:var(--s-snug) var(--s-comfortable) var(--s-snug)}
 .doors a{display:flex;align-items:center;gap:var(--s-comfortable);text-decoration:none;
  background:var(--card);border:1px solid var(--line);border-radius:var(--r-card);
  padding:var(--s-comfortable);margin:0 0 var(--s-base);color:var(--ink);box-shadow:var(--shadow)}
@@ -163,7 +163,31 @@ footer img{width:36px;opacity:.75;display:block;margin:0 auto var(--s-base)}
 .hero .rule{margin-top:var(--s-base)}
 @media(min-width:620px){.hero{min-height:240px}}
 .lede{padding-top:var(--s-comfortable)}
-.doors a{padding:var(--s-base) var(--s-comfortable);margin-bottom:var(--s-snug)}
+.doors a{padding:var(--s-snug) var(--s-comfortable);margin-bottom:var(--s-tight)}
+
+.ask{max-width:760px;margin:0 auto var(--s-base);padding:0 var(--s-comfortable);}
+.ask form{display:flex;gap:var(--s-snug);}
+.ask input{flex:1 1 auto;min-width:0;font:inherit;font-size:var(--fs-body);
+  padding:var(--s-base) var(--s-comfortable);border:1px solid var(--line);
+  border-radius:var(--r-pill);background:var(--card);color:var(--ink);}
+.ask input:focus{outline:2px solid var(--teal);outline-offset:1px;}
+.ask button{font:inherit;font-size:var(--fs-label);font-weight:700;letter-spacing:.04em;
+  text-transform:uppercase;padding:var(--s-base) var(--s-section);border:0;
+  border-radius:var(--r-pill);background:var(--teal);color:var(--card);cursor:pointer;}
+.ask button[disabled]{opacity:.6;cursor:default;}
+.ask .out{margin-top:var(--s-base);padding:var(--s-comfortable);border-radius:var(--r-card);
+  background:var(--card);border:1px solid var(--line);font-size:var(--fs-body);
+  line-height:var(--lh-open);color:var(--ink);text-align:left;}
+.ask .out[hidden]{display:none;}
+.ask .out p{margin:0 0 var(--s-snug);}
+.ask .out p:last-child{margin:0;}
+.ask .out a{color:var(--teal);}
+.ask .egs{margin:var(--s-base) 0 0;font-size:var(--fs-meta);color:var(--muted);text-align:left;}
+.ask .egs b{display:block;font-weight:600;margin-bottom:var(--s-tight);
+  text-transform:uppercase;letter-spacing:.06em;}
+.ask .egs button{display:block;width:100%;text-align:left;background:none;border:0;
+  color:var(--muted);font-size:var(--fs-meta);text-transform:none;letter-spacing:0;
+  font-weight:400;padding:var(--s-tight) 0;cursor:pointer;}
 </style>
 </head>
 <body>
@@ -192,7 +216,9 @@ footer img{width:36px;opacity:.75;display:block;margin:0 auto var(--s-base)}
   <p>St. Martin / Sint Maarten</p>
   <div class="rule"></div>
 </header>
-<p class="lede">Where we eat, swim and spend our days on St.&nbsp;Martin.<br>Our own list, kept up to date.</p>
+<p class="lede">Where we eat, swim and spend our days on SXM. Our own list, kept up to date below &mdash; or ask our concierge anything.</p>
+<section class="ask"><form id="askf"><input id="askq" type="text" autocomplete="off" placeholder="Ask us anything about the villa or the island" aria-label="Ask us anything about the villa or the island"><button id="askb" type="submit">Ask</button></form><div class="out" id="asko" hidden></div></section>
+<script>(function(){var f=document.getElementById("askf"),q=document.getElementById("askq"),b=document.getElementById("askb"),o=document.getElementById("asko");function esc(s){return s.replace(/[&<>"]/g,function(ch){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[ch];});}function md(s){return esc(s).replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g,'<a href="$2" rel="noopener">$1</a>').split(/\n{2,}/).map(function(p){return "<p>"+p.replace(/\n/g,"<br>")+"</p>";}).join("");}function ask(text){if(!text)return;o.hidden=false;o.textContent="Thinking\u2026";b.disabled=true;fetch("https://villa-nilly-concierge.bitter-bread-1a39.workers.dev/",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({q:text,lang:"en"})}).then(function(r){return r.json();}).then(function(d){o.innerHTML=md(d.answer||"We could not reach the concierge just now. Message us on WhatsApp and we will answer ourselves.");}).catch(function(){o.textContent="We could not reach the concierge just now. Message us on WhatsApp and we will answer ourselves.";}).then(function(){b.disabled=false;});}f.addEventListener("submit",function(e){e.preventDefault();ask(q.value.trim());});Array.prototype.forEach.call(document.querySelectorAll(".egs button"),function(el){el.addEventListener("click",function(){q.value=el.getAttribute("data-q");ask(q.value);});});})();</script>
 <nav class="doors"><a href="dining.html"><span class="t"><b>Dining</b><small>41 restaurants and bars we actually go to</small></span><span class="arr">&rarr;</span></a><a href="beaches.html"><span class="t"><b>Beaches</b><small>15 beaches we actually swim at</small></span><span class="arr">&rarr;</span></a><a href="activities.html"><span class="t"><b>Activities</b><small>30 things we actually do</small></span><span class="arr">&rarr;</span></a><a href="villa.html"><span class="t"><b>The Villa</b><small>Where the list comes from</small></span><span class="arr">&rarr;</span></a></nav>
 <p class="langline"><a class="lang" href="fr/" hreflang="fr" lang="fr" rel="alternate">Français</a></p>
 <p class="note">No app, nothing to sign up for. Add it to your home screen and it is there all week.</p>
